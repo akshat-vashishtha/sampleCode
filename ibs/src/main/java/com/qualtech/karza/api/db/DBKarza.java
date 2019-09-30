@@ -1,0 +1,63 @@
+package com.qualtech.karza.api.db;
+
+import com.qualtech.api.db.AuthValidator;
+import com.qualtech.api.db.ServiceMaster;
+import com.qualtech.karza.api.request.Header;
+import com.qualtech.karza.api.request.KarzaFullReqRes;
+import com.qualtech.karza.api.request.KarzaReqRes;
+
+public interface DBKarza {
+	ServiceMaster getServiceCredential(String serviceRequest);
+	int insertKarzaRequestResponse(KarzaReqRes rq);
+	
+	int insertShopEstablishmentReqRes(KarzaFullReqRes fullReqRes);
+	AuthValidator validateAuth(Header header);
+	String getPdfName(String tag);
+	int insertNregaRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertTanRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertDlRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertIECRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertForm16RequestResponse(KarzaFullReqRes fullReqRes);
+	int insertForm16QuatRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertPngRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertEsicIdRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertTeleRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertElectricalRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertFSSAILicenceRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertRCAuthRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertElectrical2RequestResponse(KarzaFullReqRes fullReqRes);
+	int insertPanRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertTeleRequestResponse2(KarzaFullReqRes fullReqRes);
+	int insertDlReqRes(KarzaFullReqRes fullReqRes);
+	void inserAllinDBPassport(KarzaFullReqRes karzaFullReqRes);
+	void inserAllinDBPITRAuth(KarzaFullReqRes fullReqRes);
+	void insertAllinIFSC(KarzaFullReqRes fullReqRes);
+	void insertHSNRequestProcess(KarzaFullReqRes fullReqRes);
+	void insertEmailAuthResponse(KarzaFullReqRes fullReqRes);
+	void insertAadharReqResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinUdyogAadharResponse(KarzaFullReqRes fullReqRes);
+	void insertAlinlGSTAuthenticationResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinLLPIdentificationResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinCAMemberShipAuthResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinICSIMemberShipResponse(KarzaFullReqRes fullReqRes);
+	void inserAllintICWAIFirmAuthResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinEPFAuthOTPResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinGstIdentificationResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinEPFAuthPassbookResponse(KarzaFullReqRes fullReqRes);
+	void insertAddressRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertMCASignatureRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertVoterRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertLpgRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertcompSearchRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertLpgIdentiRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertnameSimilarityRequestResponse(KarzaFullReqRes fullReqRes);
+	int insertLLPCINLookUpRequestResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinICWAIMembershipResponse(KarzaFullReqRes fullReqRes);
+	void insertAllinRCRequestProcess(KarzaFullReqRes fullReqRes);
+	int insertBankAccountRequestResponse(KarzaFullReqRes fullReqRes);
+	void insertLpg2RequestResponse(KarzaFullReqRes fullReqRes);
+	void insertEmolpyerLookupRequestResponse(KarzaFullReqRes fullReqRes);
+	void insertUanLookupRequestResponse(KarzaFullReqRes fullReqRes);
+	void insertWebsiteDomainRequestResponse(KarzaFullReqRes fullReqRes);
+	void insertKycOcrRequestResponse(KarzaFullReqRes fullReqRes);
+}

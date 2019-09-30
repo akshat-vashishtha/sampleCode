@@ -1,0 +1,12 @@
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA@9871",
+    "correlationId": "KycDemo11July2017PCS",
+       "token": "123456789"
+  },
+  "payload": {
+  "tel_no": "0251-2880343"
+  }
+
+} 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="starter_app" version="2.5">
+	<display-name>ibs</display-name>
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/springmvc-servlet.xml</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/ib/*</url-pattern>
+	</servlet-mapping>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>equifaxPcrHtml</servlet-name>
+		<servlet-class>com.qualtech.equifax.api.servlet.EquifaxServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>equifaxPcrHtml</servlet-name>
+		<url-pattern>/equifaxPcrHtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>equifaxMfiHtml</servlet-name>
+		<servlet-class>com.qualtech.equifax.api.servlet.EquifaxServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>equifaxMfiHtml</servlet-name>
+		<url-pattern>/equifaxMfiHtml</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>CibilMVCServlet</servlet-name>
+		<servlet-class>com.qualtech.cibil.api.servlet.CibilMVCServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CibilMVCServlet</servlet-name>
+		<url-pattern>/getCibilConsumerReport</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

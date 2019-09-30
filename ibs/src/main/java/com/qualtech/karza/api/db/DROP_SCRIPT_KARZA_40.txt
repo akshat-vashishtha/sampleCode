@@ -1,0 +1,202 @@
+--------------------------requestKarzaTan----------------------------
+
+DROP TABLE QCIB_K_TAN_REQ;
+DROP SEQUENCE QCIB_K_Tan_REQ_SQC;
+
+--------------------------requestKarzaCompSearch----------------------------
+
+DROP TABLE QCIB_K_COMPSEARCH_REQ;
+DROP SEQUENCE QCIB_K_COMPSEARCH_REQ_SQC;
+
+--------------------------requestKarzaUdyogAadhar----------------------------
+
+DROP TABLE QCIB_K_UDYOGAADHAR_REQ;
+DROP SEQUENCE QCIB_K_UDYOGAADHAR_REQ_SQC;
+
+--------------------------requestKarzaGstIdentification----------------------------
+
+DROP TABLE QCIB_K_GSTIDENTIFICATION_REQ;
+DROP SEQUENCE QCIB_K_GSTIDEN_REQ_SQC;
+
+--------------------------requestKarzaIFSC----------------------------
+
+DROP TABLE QCIB_K_IFSC1_REQ;
+DROP SEQUENCE QCIB_K_IFSC1_REQ_SQC;
+
+--------------------------requestKarzaITRAuth----------------------------
+DROP TABLE QCIB_K_ITRAUTH_REQ;
+DROP SEQUENCE QCIB_K_ITRAUTh_REQ_SQC;
+
+--------------------------requestKarzaForm16AuthReq----------------------------
+
+DROP TABLE QCIB_K_FORM16AUTH_REQ;
+DROP SEQUENCE QCIB_K_FORM16AUTH_REQ_SQC;
+
+--------------------------requestKarzaForm16AuthReq----------------------------
+
+DROP TABLE QCIB_K_FORM16QUAT_REQ;
+DROP SEQUENCE QCIB_K_FORM16QUAT_REQ_SQC;
+
+--------------------------requestForm16QuatReq----------------------------
+
+DROP TABLE QCIB_K_ADDRESS_REQ;
+DROP SEQUENCE QCIB_K_ADDRESS_REQ_SQC;
+
+--------------------------requestKarzaAddressReq----------------------------
+
+DROP TABLE QCIB_K_NAMESIMILARITY_REQ;
+DROP SEQUENCE QCIB_K_NAMESIMILARITY_REQ_SQC;
+
+----------------------------requestKarzaFSSAILicence-------------------------
+
+DROP TABLE  QCIB_K_FSSAILICENCE_REQ;
+DROP SEQUENCE QCIB_K_FSSAILICENCE_REQ_SQC;
+
+---------------------------requestKarzaICWAIMember----------------------------
+
+DROP TABLE  QCIB_K_ICWAIMEMBERSHIP_REQ;
+DROP SEQUENCE QCIB_K_ICWAIMEMBERSHIP_REQ_SQC;
+
+---------------------------requestKarzaHSN-------------------------------------
+
+DROP TABLE  QCIB_K_HSN1_REQ;
+DROP SEQUENCE QCIB_K_HSN1_REQ_SQC;
+
+-------------------------requestKarzaPng--------------------------------------
+
+DROP TABLE   QCIB_K_PNG_REQ;
+DROP SEQUENCE QCIB_K_PNG_REQ_SQC;
+
+
+------------------------requestPan---------------------
+
+DROP SEQUENCE  PAN_REQ_SQC;
+
+DROP TABLE QCIB_K_PAN_REQ;
+
+
+----------------------requestNAREGA---------------------
+
+  DROP TABLE QCIB_K_NREGA_REQ;
+
+  DROP SEQUENCE  QCIB_K_NREGA_REQ_SQC;
+
+ --------------------------REQUEST PASSBOOK----------------
+
+
+  DROP TABLE QCIB_K_EPFAUTHPASSBOOK_REQ;
+ 
+  DROP SEQUENCE  QCIB_K_EPF_AUTH_PASS_REQ_SQC;
+
+---------------------------------requestKarzaESICIDAuth----------
+
+
+  DROP TABLE QCIB_K_ESICIDAUTH_REQ ;
+
+  DROP SEQUENCE  QCIB_K_ESICIDAUTH_REQ_SQC;
+
+-----------------------------------requestBankAccount------------------
+
+
+  DROP TABLE QCIB_K_BANKACCOUNT_REQ ;
+ 
+  DROP SEQUENCE QCIB_K_BANKACCOUNT_REQ_SQC;
+
+----------------------------------requestRCSearch-------------------------------
+
+
+ DROP TABLE QCIB_K_RCSEARCH_REQ ;
+ 
+ DROP SEQUENCE  QCIB_K_RCSEARCH_REQ_SQC ;
+
+------------------------------------requestKarzaLPGIdentification------------
+
+
+ DROP TABLE QCIB_K_LLPIDEN_REQ ;
+ 
+ DROP SEQUENCE  QCIB_K_LLPIDEN_REQ_SQC;
+
+-------------------------------requestkarzaAadhar---------------------
+
+drop table QCIB_K_AADHAR_REQ;
+
+drop sequence QCIB_K_AADHAR_REQ_SQC;
+
+
+-----------------------------requestkarzapassport-------------------------
+
+
+drop table QCIB_K_PASSPORT_REQ ;
+
+drop sequence QCIB_K_PASSPORT_REQ_SQC;
+
+-----------------------------requestkarzaMCASIGNATURE-------------------------
+
+
+drop table QCIB_K_MCA_REQ ;
+
+drop sequence QCIB_K_MCA_REQ_SQC;
+
+-----------------------------requestkarzaIEC-------------------------
+
+
+drop table QCIB_K_IEC_REQ;
+
+drop sequence QCIB_K_IEC_REQ_SQC;
+
+-----------------------------requestkarzaLLPCIN-------------------------
+
+
+drop table QCIB_K_LLPCIN_REQ;
+
+drop sequence QCIB_K_LLPCIN_REQ_SQC;
+
+----------------------------requestLLPIDENTIFICATION------------
+
+drop table QCIB_K_LLPIDEN_REQ;
+
+drop sequence QCIB_K_LLPIDEN_REQ_SQC;
+
+----------------------------requestkarzaEMAILAUTHENTICATION------------
+
+drop table QCIB_K_EMAILAUTH_REQ;
+
+drop sequence QCIB_K_EMAILAUTH_REQ_SQC;
+
+----------------------------requestkarzaDLREQUEST2-------------
+
+drop table QCIB_K_DL2_REQ;
+
+drop sequence QCIB_K_DL2_REQ_SQC;
+
+---------------------------requestkarzaElectricalRequest2----------------
+
+drop table QCIB_K_ELEC2_REQ;
+
+drop sequence QCIB_K_ELEC2_REQ_SQC;
+
+-------------------------requestKarzaLPG2--------------------------------------
+
+DROP TABLE   QCIB_K_LPG2_REQ;
+DROP SEQUENCE QCIB_K_LPG2_REQ_SQC;
+
+
+-------------------------requestKarzaTELE2--------------------------------------
+
+DROP TABLE   QCIB_K_TELE2_REQ;
+DROP SEQUENCE  QCIB_K_TELE2_REQ_SQC;
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

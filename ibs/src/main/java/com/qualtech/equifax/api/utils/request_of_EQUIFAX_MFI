@@ -1,0 +1,55 @@
+{
+
+    "header": {
+        "msgVersion": "",
+        "appId": "",
+        "correlationId": "EquifaxDemo11July2017MCR",
+        "userId": "",
+        "password": "",
+        "rollId": "",
+	"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTUwMDU5MzEwNn0.UuyjkgVYa4aL9JP_XLLB4bXzosGIsawzxyOUcSlhGDKHxtTWsgohWEindPk8zfS20-osCeBeQsv7nk3iApNp6Q"
+    },
+    "payload": {
+        "transaction": [
+            {
+                "fName": "DILLIP KUMAR NAYAK",
+                "mName": "",
+                "lName": "",
+                "dob": "1946-01-04",
+              	"gender":"2",
+              	"maritalStatus":"Single",
+				"inquiryPurpose": "0E",
+                "keyPersonName": "Vasu Kumar",
+                "keyPersonType": "Father",
+                "ids": [
+                    {
+                        "idName": "Pan",
+                        "idNo": "ATCPS9170Q"
+                    }
+                ],
+                "relations": [
+                    {
+                        "name": "DILIP",
+                        "relation": "K02"
+                    }
+                ],
+                "phones": [
+                    {
+                        "teleNo": "9893688111",
+                        "type": "Mobile"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "city": "BANGALORE",
+                        "state": "OR",
+                        "pin": "751007",
+                        "address": "PLOT NO 270/A KHORDA",
+                        "type": "D01"
+                    }
+                ]
+            }
+        ]
+    }
+}
+

@@ -1,0 +1,11 @@
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "CREDIT@1234",
+    "correlationId": "CreditDemo11July2017PCS",
+       "token": "987654321"
+  },
+  "payload": {
+    "uniqueId": "1"
+  }
+}

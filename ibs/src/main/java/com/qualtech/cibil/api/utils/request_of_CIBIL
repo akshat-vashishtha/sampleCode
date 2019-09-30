@@ -1,0 +1,51 @@
+ {
+  "header": {
+    "appId": "123",
+    "correlationId": "CIBILDemo11July2017",
+    "msgVersion": "v1",
+    "password": "x34678",
+    "rollId": "ADMIN",
+    "token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTUwMDU5MzEwNn0.UuyjkgVYa4aL9JP_XLLB4bXzosGIsawzxyOUcSlhGDKHxtTWsgohWEindPk8zfS20-osCeBeQsv7nk3iApNp6Q",
+    "userId": "admin"
+  },
+  "payload": {
+    "transaction": [
+      {
+	"scoreType": "03",
+        "addresses": [
+          {
+            "addressline1": "HSBC BANK INDIA PENNINSULA TIDLE PARK   ",
+            "addressline2":"OPP.HANGLA LOWER PAREL",
+            "addressline3":"TAMBARAM",
+            "addressline4":"TAMBARAM",
+            "addressline5":"",
+            "addresscategory": "04",
+            "pincode": "600045",
+            "residencecode": "01",
+            "statecode": "33"
+          }
+       
+       ],
+        "dob": "22041969",
+        "firstName": "SUBBURAIYAN",
+        "gender": "2",
+        "lastName": "SUBRAMANIYAN",
+        "middleName": "MURALI ",
+        "telephones": [
+          {
+            "telephoneExtn": "",
+            "telephoneNumber":"9944590474",
+            "telephoneType": "01"
+          }
+        ],
+        "uniqueids": [
+          {
+            "idNo": "AFAPJ1001R",
+            "idType": "01"
+          }
+          
+        ]
+      }
+    ]
+  }
+}

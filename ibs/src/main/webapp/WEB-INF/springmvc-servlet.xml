@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.2.xsd
+   		http://www.springframework.org/schema/util/ http://www.springframework.org/schema/util/spring-util.xsd
+   		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd"
+	default-autowire="byName">
+	<!-- Enables the Spring MVC @Controller annotations -->
+	<mvc:annotation-driven />
+	<!-- Activates scanning of @Autowired -->
+	<context:annotation-config />
+
+	<!-- Activates scanning of @Repository and @Service -->
+	<context:component-scan base-package="com.qualtech" />
+
+	
+
+	<!-- Define static resource location -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Multipart post handing -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10000000" />
+	</bean>
+	
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:db.properties</value>
+		</property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<bean id="source1" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+				<property name="driverClass" value="${jdbc.driverClassName}" />
+				<property name="jdbcUrl" value="${jdbc.url}" />
+				<property name="user" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
+				<property name="acquireIncrement" value="${hibernate.c3p0.acquireIncrement}" />
+				<property name="minPoolSize" value="${hibernate.c3p0.min_size}" />
+				<property name="maxPoolSize" value="${hibernate.c3p0.max_size}" />
+				<property name="maxIdleTime" value="${hibernate.c3p0.idleConnectionTestPeriod}" />
+	            <property name="maxStatements" value="${hibernate.c3p0.max_statements}" />
+	            <property name="preferredTestQuery" value="${hibernate.c3p0.preferredTestQuery}" />
+	            <property name="checkoutTimeout" value="${hibernate.c3p0.checkoutTimeout}" />
+	            <property name="idleConnectionTestPeriod" value="${hibernate.c3p0.idleConnectionTestPeriod}" />
+	            <property name="testConnectionOnCheckin" value="${hibernate.c3p0.testConnectionOnCheckin}" />
+	            <property name="testConnectionOnCheckout" value="${hibernate.c3p0.testConnectionOnCheckout}" />
+	            <property name="unreturnedConnectionTimeout" value="${hibernate.c3p0.unreturnedConnectionTimeout}" />
+	            <property name="debugUnreturnedConnectionStackTraces" value="${hibernate.c3p0.debugUnreturnedConnectionStackTraces}" />
+			</bean>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.generate_statistics">${hibernate.generate_statistics}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+				<prop key="hibernate.order_inserts">${hibernate.order_inserts}</prop>
+				<prop key="hibernate.order_updates">${hibernate.order_updates}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
+				<prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+				<prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+				<prop key="org.hibernate.stat">${org.hibernate.stat}</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="com.qualtech"></property>
+	</bean>
+	<!-- transaction manager -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager"	proxy-target-class="true" />
+		
+	<task:annotation-driven />
+	
+	<bean id="cronTimer" class="com.qualtech.api.crons.IbsCronController"></bean>
+</beans>

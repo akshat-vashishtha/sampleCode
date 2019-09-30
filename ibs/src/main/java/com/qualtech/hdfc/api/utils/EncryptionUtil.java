@@ -1,0 +1,67 @@
+package com.qualtech.hdfc.api.utils;
+
+import java.security.KeyFactory;
+import java.security.PrivateKey;
+import java.security.PublicKey;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.Random;
+
+import javax.crypto.Cipher;
+
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.binary.Hex;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EncryptionUtil 
+{
+	
+	final static String privateKey="308204be020100300d06092a864886f70d0101010500048204a8308204a40201000282010100996d2471b6b364a0f0d34069b72dae33af9be84f21aa0e8a2baad026f6a5ee6d470b6a72be8651c94d8f2e65d0bcede09db4e5680b1962c15d87cb91fe83d4aba82dde92af78898b1d4b28def9df30971ab87d3ea97147ff3cc90c901022c2e78ad7a6d7d308f7024c813c3069e85a9033838ccacfc27e5ef2af70a5dd00071eb15722ba61b936457bd8a7b64441cdbc5b7df6d688cabff7b0420c32730ea876f1c21cd9023976ee9e4679fa02ba11d270cd1befa102035f9dd0ee4e83089b16acdf5724144c665dd64bc1f00c203ee9fc9286f18efb89b0236fc1cf8a3c406678893eb8d68b45f71daa2b7de7f7b1869bf8b69a460db8af35e517c363ed7d8d0203010001028201010092566c955d8abbe759ec549ac091fc7ee5f791dbb023509cef4b8c202dcf549bbc50a226719d11f32c5bee0844d17f1e67adbbc5c218637e45a4994155fe0de1f096579d976a23dea18127a98db118da772d12a0aae316a5d72778290c8aeb5607b2eb3b1dd98628162a89eb2f88e4a077d1f87f152cd075e589faaae920f6a80c265a4cfe225ae3b9a2748222072fad06886b12fe65ee489af728b0f68c70703dc804cf4be27e533fc0757478395be48f35f3ce8f4be736cadb271b436fe5a5be770768532065e941c3dcab34e4afb769643a212f96e0b364629229f0a49ca2cb6fab7fce8f84425eecaec3a2b334ba06c6bbebcad7aa6e985690a7288f28ed02818100e76dce70dd7b4c1121086f3f460cf79c16178f33b76234fe0fe74ac476aab2901839229868393cd5e13bc57f101d11d1fddb3078ee2442fe76a09d8d5a9d1af8dd23a3897dc8dc73262e146e79114dc8195bdf757b7c415cc7f8d02d9c608d2b4a6b3a8ff1a3d80e5c2cbc69a8ad5eeeb91a523221f99f1053077b73af6b9cbf02818100a9b73d93a33afb81ddcde7f46ff375611acc38f14ad56027c7d7eab4ef0dddeca7f8aa47acf382844ee49260c99c592dfd529dcef98f2dcf639259fdf7e9c9430f0a7e62fb7cbf96a8dee3a5ae6eba1b25648871a14272b75261936c78f805d8a1ca4b464b7c0a4c082b18d1fc55c9bc6c63b50e391b484538e39c4369f61cb30281802e4278bd7ec8229059f601a6b82de760bfd9bdba2cb1e8bdd017ff8dfdda690efc888f2dbfc7912d7f741f2a22e26ca97900d35398e68eada6b0bc4d810b5e54d87f43353c7b65f56e704f8d358e0bea2f8779c75603a45d136bdcd1012d1b8ac7b95f5f5e81cdb231229016deaca90936ded807455b4c3c4b1c77c4cc0fcaa9028181009ae538f8145472d3d642655f7d05b0adcdad729316ffa3e0eace2fd2af13f2e6596fe4c9c21a05970802296ed8d32fb97fa8f58abfce63bb125fb26ecee3bae2cf497e8c8c8710bd4aa71312561f8d0fd592e9ccfba70fd82d020d7144fee9270c92fb1ccf2c08a1d81aad6e89652ad823fce47474be67b975f096e018479d6d0281800b27c573ccb1690e49b8ea0ebe892e81406f605355f2f39f5b504389616473443976ab07b538c66e563e22f9746c59b7b1e3a77a0af4f84dbdc805d7ea7c731cf79d64493fc8b45f0c20fd08a76ff5035ad47e6f8a206b2ad31f37107ea7f3d51aa5d89cef2f81d399d0f0ff62dd7de4550b5291faa2335ed3097f3a93e0fd71";
+	final static String publicKey="30820122300d06092a864886f70d01010105000382010f003082010a0282010100996d2471b6b364a0f0d34069b72dae33af9be84f21aa0e8a2baad026f6a5ee6d470b6a72be8651c94d8f2e65d0bcede09db4e5680b1962c15d87cb91fe83d4aba82dde92af78898b1d4b28def9df30971ab87d3ea97147ff3cc90c901022c2e78ad7a6d7d308f7024c813c3069e85a9033838ccacfc27e5ef2af70a5dd00071eb15722ba61b936457bd8a7b64441cdbc5b7df6d688cabff7b0420c32730ea876f1c21cd9023976ee9e4679fa02ba11d270cd1befa102035f9dd0ee4e83089b16acdf5724144c665dd64bc1f00c203ee9fc9286f18efb89b0236fc1cf8a3c406678893eb8d68b45f71daa2b7de7f7b1869bf8b69a460db8af35e517c363ed7d8d0203010001";
+
+	public static String encryptString(String partnerId) 
+	{
+		String output = null;
+		Random random = new Random();
+		String id = String.format("%04d", random.nextInt(10000));
+		String rawString=partnerId+"+"+id;
+//		String rawString="A2599908"+"9996";
+		String key=publicKey;
+		try 
+		{
+			byte[] res = Hex.decodeHex(key.toCharArray());
+			PublicKey publicKey = KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(res));
+			Cipher cipher = Cipher.getInstance("RSA");
+			cipher.init(Cipher.PUBLIC_KEY, publicKey);
+			output = Base64.encodeBase64String(cipher.doFinal(rawString.getBytes("UTF-8")));
+		}
+		catch (Exception ex) 
+		{
+			ex.printStackTrace();
+		}
+		return output;
+
+	}
+
+	public static String decryptString(String input) 
+	{
+		String output = null;
+		String key=privateKey;
+		try 
+		{
+			byte[] privateKeyBytes = Hex.decodeHex(key.toCharArray());
+			PrivateKey privateKey = KeyFactory.getInstance("RSA").generatePrivate(new PKCS8EncodedKeySpec(privateKeyBytes));
+			Cipher cipher = Cipher.getInstance("RSA");
+			cipher.init(Cipher.DECRYPT_MODE, privateKey);
+			output = new String(cipher.doFinal(Base64.decodeBase64(input)), "UTF-8");
+
+		}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		return output;
+	}
+	
+}

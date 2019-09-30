@@ -1,0 +1,141 @@
+V2 request DL:
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "12345",
+     "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+    "dl_no": "MH01 20090091406",
+    "dob": "12-06-1987",
+    "name": "VIJAY RAJ SAMDARIA",
+    "consent":"Y"
+  }
+}
+
+V2 request ELEC:
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "12345",
+     "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+    "consumer_id": "555295175",
+    "service_provider": "BEST_MH",
+    "name": "VIJAY RAJ SAMDARIA",
+    "consent":"Y"
+  }
+}
+
+
+V2 request LPG:
+
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "12345",
+     "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+    "lpg_id": "10000000050431060",
+    "name": "VIJAY RAJ SAMDARIA",
+    "consent":"Y"
+  }
+}
+
+V2 request TELE:
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "KycDemo11July2017PCS",
+    "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+    "tel_no": "0251-2880343",
+    "name": "VIJAY RAJ SAMDARIA",
+    "consent":"Y"
+  }
+}
+
+
+V3 request DL:
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "12345",
+     "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+   "consent": "Y",
+  "dl_no": "MH01 20090091406",
+  "dob": "12-06-1987"
+  }
+}
+
+
+V3 request ELEC:
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "12345",
+     "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+   "consumer_id": "555295175",
+  "service_provider": "BEST_MH",
+    "consent":"Y"
+  }
+}
+
+
+V3 request LPG Identification:
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "12345",
+     "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+    "input": "9920349349",
+    "consent":"Y"
+  }
+}
+
+
+
+V3 request LPG:
+
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA",
+    "correlationId": "12345",
+     "token": "f4b10aac-e9c2-4bf5-8c8e-31bee316dd8d"
+  },
+  "payload": {
+    "lpg_id": "10000000050431060",
+    "consent":"Y"
+  }
+}
+
+V3 request DL:
+
+
+
+
+

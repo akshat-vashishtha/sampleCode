@@ -1,0 +1,14 @@
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA@9871",
+    "correlationId": "KycDemo11July2017PCS",
+       "token": "123456789"
+  },
+  "payload": {
+  "dl_no": "MH01 20090091406",
+  "dob": "12-06-1987"
+  }
+
+} 
+

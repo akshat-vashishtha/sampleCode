@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+	   <param name="append" value="true" />
+	   <param name="maxFileSize" value="50MB" />
+	   <param name="maxBackupIndex" value="1000" />
+	   <!-- For Tomcat -->
+	    <param name="file" value="/opt/Logger/ibs.log" />  
+	    <!-- <param name="file" value="E:\\opt\\Logger\\ibs3.0.log" /> -->
+	    
+	   <layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern"
+			value="[%d{ISO8601}] %-5p %x %C{1}.%M(%L) - %m%n" />
+	   </layout>
+	</appender>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="file" />
+	</root>
+
+</log4j:configuration>

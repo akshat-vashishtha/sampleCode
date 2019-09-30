@@ -1,0 +1,28 @@
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "CREDIT@1234",
+    "correlationId": "CreditDemo11July2017PCS",
+       "token": "987654321"
+  },
+  "payload": {
+    "uniqueId": "1",
+    "email": "preeti.papnai@creditvidya.com",
+    "mobileNumber": "9677368592",
+    "firstName": "Preeti",
+    "middleName": "P",
+    "lastName": "Papnai",
+    "clientReference": {
+      "leadId": "1",
+      "transactionId": "001",
+      "losId": "007"
+    },
+    "companyName": "InfoCredit Services Private Limited",
+    "officeAddressLine1": "306, Simran Plaza",
+    "officeAddressLine2": "Khar west",
+    "officeAddressLine3": null,
+    "officeCity": "Mumbai",
+    "officeState": "Maharashtra",
+    "officePinCode": "400086"
+  }
+}

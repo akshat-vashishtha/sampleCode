@@ -1,0 +1,13 @@
+{
+  "header": {
+    "msgVersion": "1.0",
+    "appId": "KARZA@9871",
+    "correlationId": "KycDemo11July2017PCS",
+       "token": "123456789"
+  },
+  "payload": {
+  "consumer_id": "555295175",
+  "service_provider": "BEST_MH"
+  }
+
+} 

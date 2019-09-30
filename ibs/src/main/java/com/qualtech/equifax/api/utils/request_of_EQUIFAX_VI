@@ -1,0 +1,55 @@
+{
+  "header": {
+    "appId": "tet004",
+    "correlationId": "EquifaxDemo11July2017VID",
+    "msgVersion": "004",
+    "password": "8990",
+    "rollId": "ADMIN",
+    "userId": "admin",
+    "token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTUwMDU5MzEwNn0.UuyjkgVYa4aL9JP_XLLB4bXzosGIsawzxyOUcSlhGDKHxtTWsgohWEindPk8zfS20-osCeBeQsv7nk3iApNp6Q"
+  },
+  "payload": {
+    "transaction": [
+      {
+        "addresses": [
+          {
+            "address": "",
+            "city": "",
+            "pin": "",
+            "state": "",
+            "type": ""
+          }
+        ],
+        "dob": "",
+        "email": "",
+        "fName": "NEERAJ  KUMAR",
+        "ids": [
+          {
+            "idName": "PAN",
+            "idNo": "ATCPS9170Q"
+          }
+        ],
+        "inquiryPurpose": "",
+        "keyPersonName": "",
+        "keyPersonType": "",
+        "lName": "SHARMA",
+        "mName": "",
+        "nomineeName": "",
+        "nomineeType": "",
+        "phones": [
+          {
+            "teleNo": "",
+            "type": ""
+          }
+        ],
+        "relations": [
+          {
+            "name": "",
+            "relation": ""
+          }
+        ],
+        "requestType": ""
+      }
+    ]
+  }
+}

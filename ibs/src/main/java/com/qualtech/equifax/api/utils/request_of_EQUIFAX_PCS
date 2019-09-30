@@ -1,0 +1,52 @@
+{
+    "header": {
+        "msgVersion": "",
+        "appId": "",
+        "correlationId": "EquifaxDemo11July2017PCS",
+        "userId": "",
+        "password": "",
+        "rollId": "",
+         "token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTUwMDU5MzEwNn0.UuyjkgVYa4aL9JP_XLLB4bXzosGIsawzxyOUcSlhGDKHxtTWsgohWEindPk8zfS20-osCeBeQsv7nk3iApNp6Q"
+    },
+    "payload": {
+        "transaction": [
+            {
+                "fName": "NEERAJ  KUMAR",
+                "mName": "",
+                "lName": "SHARMA",
+                "dob": "1977-02-11",
+                "requestType": "PCS",
+                "inquiryPurpose": "02",
+                "keyPersonName": "Vasu Kumar",
+                "keyPersonType": "Father",
+                "ids": [
+                    {
+                        "idName": "Pan",
+                        "idNo": "ATCPS9170Q"
+                    }
+                ],
+                "relations": [
+                    {
+                        "name": "Vasu Kumar",
+                        "relation": "Father"
+                    }
+                ],
+                "phones": [
+                    {
+                        "teleNo": "9893688111",
+                        "type": "Mobile"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "city": "BANGALORE",
+                        "state": "MP",
+                        "pin": "451666",
+                        "address": "HOUSE NO 296 WARD  NO 8 NIWALI ROAD  SENDHWA BADWANI DIST  MADHYA PRADESH",
+                        "type": "D01"
+                    }
+                ]
+            }
+        ]
+    }
+}

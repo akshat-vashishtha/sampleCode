@@ -1,0 +1,59 @@
+{
+  "header": {
+    "msgVersion": "000005",
+    "appId": "test005",
+    "correlationId": "EquifaxDemo11July2017EVD",
+    "userId": "ADMIN",
+    "password": "12345",
+    "rollId": "ADMIN",
+     "token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTUwMDU5MzEwNn0.UuyjkgVYa4aL9JP_XLLB4bXzosGIsawzxyOUcSlhGDKHxtTWsgohWEindPk8zfS20-osCeBeQsv7nk3iApNp6Q"
+    
+  },
+  "payload": {
+    "transaction": [
+      {
+         "fName": "NEERAJ  KUMAR",
+         "mName": "",
+        "lName": "SHARMA",
+	"dob": "1977-02-11",
+        "inquiryPurpose": "",
+        "keyPersonName": "",
+        "keyPersonType": "",
+        "nomineeName": "",
+        "nomineeType": "",
+        "amount": "750000.0",
+         "ids": [
+          {
+            "idName": "PAN",
+            "idNo": "ATCPS9170Q"
+          }
+        ],
+	"relations": [
+          {
+            "name": "",
+            "relation": ""
+          }
+        ],
+	"phones": [
+          {
+            "teleNo": "9893688111",
+            "type": "home"
+          },
+	  {
+            "teleNo": "9893688111",
+            "type": "mobile"
+          }
+        ],
+        "addresses": [
+          {
+            "address": "HOUSE NO 296 WARD  NO 8 NIWALI ROAD  SENDHWA BADWANI DIST  MADHYA PRADESH",
+            "city": "",
+            "pin": "451666",
+            "state": "MP",
+            "type": ""
+          }
+        ]
+      }
+    ]
+  }
+}
