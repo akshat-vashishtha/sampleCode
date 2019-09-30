@@ -38,6 +38,7 @@ public class CibilRestWebService
 	@ResponseBody	public CibilAPIResponse cibilRequestProcess(@RequestBody CibilApiRequest cibilapirequest ) 
 	{
 		ObjectMapper om = new ObjectMapper();
+		String raw = "";
 		CibilAPIResponse apiResponse=null;
 		final CibilReqResVpn rq=new CibilReqResVpn();
 		String uniqueId = UniqueId.getUniqueId();
