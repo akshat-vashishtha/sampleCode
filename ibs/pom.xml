@@ -25,7 +25,7 @@
 		<commons-fileupload.version>1.2.2</commons-fileupload.version>
 		<asm.version>3.1</asm.version>
 		<cglib.version>2.2</cglib.version>
-		<c3p0.version>0.9.5-pre3</c3p0.version>
+		<c3p0.version>0.9.5.4</c3p0.version>
 		<commons-beanutils.version>1.8.0</commons-beanutils.version>
 		<commons-collections.version>3.2.1</commons-collections.version>
 		<commons-logging.version>1.2</commons-logging.version>
