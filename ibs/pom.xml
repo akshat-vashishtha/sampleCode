@@ -12,7 +12,7 @@
 	<properties>
 		<jdk.version>1.6</jdk.version>
 		<javax-persistence.version>2.1.0</javax-persistence.version>
-		<spring-core.version>3.1.0.RELEASE</spring-core.version>
+		<spring-core.version>4.3.19.RELEASE</spring-core.version>
 		<spring-web.version>3.1.0.RELEASE</spring-web.version>
 		<jstl.version>1.2</jstl.version>
 		<servletapi.version>3.0.1</servletapi.version>
