@@ -38,7 +38,7 @@
 		<ehcache-core.version>2.4.3</ehcache-core.version>
 		<hibernate-commons-annotations.version>4.0.1.Final</hibernate-commons-annotations.version>
 		<hibernate-entitymanager.version>4.0.1.Final</hibernate-entitymanager.version>
-		<httpclient.version>4.3.1</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		<httpcore.version>4.4.5</httpcore.version>
 		<itextpdf.version>5.5.13</itextpdf.version>
 		<slf4j-api.version>1.6.4</slf4j-api.version>
